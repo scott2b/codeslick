@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://scott2b.github.com/codeslick/sitemap.xml 
