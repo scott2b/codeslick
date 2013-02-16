@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Codeslick.com</title>
+  <title>Knightlab Hashtagger - Codeslick.com</title>
   <meta name="author" content="Scott B. Bradley">
 
   
-  <meta name="description" content="Wherin we look at using the Octopress image tag with position classes, like this: &lt;img class="left" src="http://placekitten.com/320/250" title=" &hellip;">
+  <meta name="description" content="Knightlab Hashtagger Hashtagger, a hashtag recommender, started its life as the TweetSweep project of the Innovations Class, from student project &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codeslick.com/">
+  <link rel="canonical" href="http://codeslick.com/knightlab-hashtagger/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,101 +63,66 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/15/clearing-images-in-octopress/">Clearing Images in Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-15T19:23:00-06:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Knightlab Hashtagger</h1>
     
   </header>
+  
+  <p>Hashtagger, a hashtag recommender, started its life as the TweetSweep project of the Innovations Class, from student project members Andrew Allen, Jessie Li, Christi Sodano, and  Wesley Sun and faculty advisors Larry Birnbaum, Rich Gordon, and Kris Hammond.</p>
+
+<p>My role in this project was in taking it from the classroom to the lab. This involved rearchitecturing the project and restructuring it into a fully client-side application.</p>
+
+<p>Styling and branding work was provided by Jeremy Gilbert.</p>
+
+<p>Technologies used:</p>
+
+<ul>
+<li>Backbone.js</li>
+<li>Twitter API</li>
+<li>Alchemy API</li>
+</ul>
 
 
-  <div class="entry-content"><p>Wherin we look at using the Octopress image tag with position classes, like this:</p>
+<h2>Features</h2>
 
-<pre><code>&lt;img class="left" src="http://placekitten.com/320/250" title="image from placekitten.com" &gt;
-</code></pre>
+<p>Hashtagger gives you hashtag recommendations while composing tweets with article links. Click the # to add a tag.</p>
 
-<p>and the text that goes next to the image is not long enough that we need to create the appropriate clear for the following text.</p>
+<p><img class="center" src="http://dl.dropbox.com/u/274537/images/knightlab-hashtagger-main-screenshot.png" width="600"></p>
 
-<h2>The Problem</h2>
+<p>Click the tag itself to see its usage, and to add referring users and other related tags to the composed tweet.</p>
 
-<p><img class="left" src="http://placekitten.com/320/250" title="image from placekitten.com" >
-It&#8217;s not immediately obvious how to handle this situation in Octopress: when you have some text here next to an image, and then &#8230;</p>
+<p><img class="center" src="http://dl.dropbox.com/u/274537/images/knightlab-hashtagger-popup-screenshot.png" width="500"></p>
 
-<h2>More text</h2>
+<h2>Links</h2>
 
-<p>Some more text that we don&#8217;t really want to go here, but after the image.</p>
+<p><a href="http://hashtagger.knightlabprojects.com/">Application link</a> (requires an Alchemy API key)</p>
 
-<div class="clearboth"></div>
+<p>Knight Lab project page for the <a href="http://knightlab.us/projects/hashtag-recommender-tweetsweep/">TweetSweep project</a></p>
 
+<p><a href="/projects">Back to projects</a></p>
 
-<h2>The Solution</h2>
-
-<p>The answer lies in understanding that Markdown lets you include arbitrary HTML markup within your markdown. So, you can include something like this:</p>
-
-<pre><code>&lt;div style="clear:both;"&gt;&lt;/div&gt;
-</code></pre>
-
-<p>before the second text group to get results like this:</p>
-
-<p><img class="left" src="http://placekitten.com/200/300" title="image from placekitten.com" >
-<a href="http://baconipsum.com/">Bacon ipsum</a> dolor sit amet drumstick biltong leberkas, bresaola cupidatat non dolor ex nostrud eu pancetta.</p>
-
-<div class="clearboth"></div>
-
-
-<h2>More text from <a href="http://baconipsum.com/">Bacon ipsum</a></h2>
-
-<p>Commodo t-bone ut magna, pork belly officia chicken deserunt. Aliquip consectetur proident do. Rump in duis shank dolore shoulder tongue tempor ham voluptate leberkas veniam short loin meatball.</p>
-
-<h2>Make it a style</h2>
-
-<p>Add something like this to your sass/custom/_styles.scss:</p>
-
-<pre><code>.clearboth {
-  clear: both;
-}
-</code></pre>
-
-<p>Then you can refer to the class instead of inline styling:</p>
-
-<pre><code>&lt;div class="clearboth"&gt;&lt;/div&gt;
-</code></pre>
+  
+    <footer>
+      
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codeslick.com/knightlab-hashtagger/index.html" data-via="scott2b" data-counturl="http://codeslick.com/knightlab-hashtagger/index.html" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
+      
+    </footer>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -175,7 +140,7 @@ It&#8217;s not immediately obvious how to handle this situation in Octopress: wh
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -194,6 +159,7 @@ It&#8217;s not immediately obvious how to handle this situation in Octopress: wh
 
   
 </aside>
+
 
     </div>
   </div>

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Codeslick.com</title>
+  <title>Knight Lab Provisioning & Deployment Processes - Codeslick.com</title>
   <meta name="author" content="Scott B. Bradley">
 
   
-  <meta name="description" content="Wherin we look at using the Octopress image tag with position classes, like this: &lt;img class="left" src="http://placekitten.com/320/250" title=" &hellip;">
+  <meta name="description" content="Knight Lab Provisioning & Deployment Processes Feb 15th, 2013 In early 2013, I overhauled the provisioning and deployment processes at the Knight &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://codeslick.com/">
+  <link rel="canonical" href="http://codeslick.com/knightlab-processes/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,19 +63,48 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article role="article">
   
-  
-  
-    <article>
-      
   <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/15/clearing-images-in-octopress/">Clearing Images in Octopress</a></h1>
-    
-    
+    <h1 class="entry-title">Knight Lab Provisioning & Deployment Processes</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-15T16:57:00-06:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time></p>
+  </header>
+  
+  <p>In early 2013, I overhauled the provisioning and deployment processes at the Knight Lab to establish consistency and to streamline our process. The goal was push-button provisioning and deployment with a mind toward simplicity and contintinous integration. To this end, I implemented the following:</p>
+
+<ul>
+<li>Amazon AWS CloudFormation configuration file. This configuration creates an Ubuntu web tier server with the appropriate packages and configurations for handling web applications hosted at the Knight Lab.</li>
+<li>Django project template. Though not all of our projects are done with Django, Django&#8217;s start-project configuration template capabilities provide us with a clear means of defining how a new project should be structured. The structure of future project types will likely be based on the new Django setup.</li>
+<li>Fabfile for deployment management. Includes management of staging and production environments, and related configuration and deployment tasks including:
+ Project setup, including repository cloning, and appropriate configurations
+ Project deployment
+ Apache start/stop/restart
+ Code checkout from version control system
+ Deployment of static files/assets into S3
+ Mangement of maintenance mode</li>
+</ul>
+
+
+<p><a href="/projects">Back to projects</a></p>
+
+  
+    <footer>
       <p class="meta">
         
+        
 
 
 
@@ -87,77 +116,25 @@
   
 
 
-<time datetime="2013-02-15T19:23:00-06:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
+<time datetime="2013-02-15T16:57:00-06:00" pubdate data-updated="true">Feb 15<span>th</span>, 2013</time>
         
       </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Wherin we look at using the Octopress image tag with position classes, like this:</p>
-
-<pre><code>&lt;img class="left" src="http://placekitten.com/320/250" title="image from placekitten.com" &gt;
-</code></pre>
-
-<p>and the text that goes next to the image is not long enough that we need to create the appropriate clear for the following text.</p>
-
-<h2>The Problem</h2>
-
-<p><img class="left" src="http://placekitten.com/320/250" title="image from placekitten.com" >
-It&#8217;s not immediately obvious how to handle this situation in Octopress: when you have some text here next to an image, and then &#8230;</p>
-
-<h2>More text</h2>
-
-<p>Some more text that we don&#8217;t really want to go here, but after the image.</p>
-
-<div class="clearboth"></div>
-
-
-<h2>The Solution</h2>
-
-<p>The answer lies in understanding that Markdown lets you include arbitrary HTML markup within your markdown. So, you can include something like this:</p>
-
-<pre><code>&lt;div style="clear:both;"&gt;&lt;/div&gt;
-</code></pre>
-
-<p>before the second text group to get results like this:</p>
-
-<p><img class="left" src="http://placekitten.com/200/300" title="image from placekitten.com" >
-<a href="http://baconipsum.com/">Bacon ipsum</a> dolor sit amet drumstick biltong leberkas, bresaola cupidatat non dolor ex nostrud eu pancetta.</p>
-
-<div class="clearboth"></div>
-
-
-<h2>More text from <a href="http://baconipsum.com/">Bacon ipsum</a></h2>
-
-<p>Commodo t-bone ut magna, pork belly officia chicken deserunt. Aliquip consectetur proident do. Rump in duis shank dolore shoulder tongue tempor ham voluptate leberkas veniam short loin meatball.</p>
-
-<h2>Make it a style</h2>
-
-<p>Add something like this to your sass/custom/_styles.scss:</p>
-
-<pre><code>.clearboth {
-  clear: both;
-}
-</code></pre>
-
-<p>Then you can refer to the class instead of inline styling:</p>
-
-<pre><code>&lt;div class="clearboth"&gt;&lt;/div&gt;
-</code></pre>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codeslick.com/knightlab-processes/index.html" data-via="scott2b" data-counturl="http://codeslick.com/knightlab-processes/index.html" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
-
-    </article>
+      
+    </footer>
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+</article>
+
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -175,7 +152,7 @@ It&#8217;s not immediately obvious how to handle this situation in Octopress: wh
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -194,6 +171,7 @@ It&#8217;s not immediately obvious how to handle this situation in Octopress: wh
 
   
 </aside>
+
 
     </div>
   </div>
