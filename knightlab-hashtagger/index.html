@@ -104,7 +104,9 @@
 
 <p>Knight Lab project page for the <a href="http://knightlab.us/projects/hashtag-recommender-tweetsweep/">TweetSweep project</a></p>
 
-<p><a href="/projects">Back to projects</a></p>
+<p>  <h3>Project navigation</h3>
+  <a href="/projects/knightlab"><img style="height:50px;" src="http://dl.dropbox.com/u/274537/images/Northwestern_University_KnightLab_Logo1.png"></img></a>
+  <a href="/projects/django"><img style="height:50px;" src="http://dl.dropbox.com/u/274537/images/djangopowered126x54.gif"></img></a></p>
 
   
     <footer>
@@ -112,7 +114,7 @@
       
         <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codeslick.com/knightlab-hashtagger/index.html" data-via="" data-counturl="http://codeslick.com/knightlab-hashtagger/index.html" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://codeslick.com/knightlab-hashtagger/index.html" data-via="scott2b" data-counturl="http://codeslick.com/knightlab-hashtagger/index.html" >Tweet</a>
   
   
   
@@ -138,6 +140,22 @@
   </ul>
 </section>
 
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("scott2b", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/scott2b" class="twitter-follow-button" data-show-count="false">Follow @scott2b</a>
+  
+</section>
 
 
 
